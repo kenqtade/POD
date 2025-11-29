@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prompt Odyssey</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+    <style>
+      :root {
+        --background: #1e2b30;
+        --foreground: #d3e3f1;
+        --card: #29383d;
+        --card-foreground: #d3e3f1;
+        --popover: #29383d;
+        --popover-foreground: #d3e3f1;
+        --primary: #71b0cf;
+        --primary-foreground: #1e2b30;
+        --secondary: #35484e;
+        --secondary-foreground: #d3e3f1;
+        --muted: #35484e;
+        --muted-foreground: #a0b0be;
+        --accent: #385660;
+        --accent-foreground: #d3e3f1;
+        --destructive: #ff5555;
+        --destructive-foreground: #d3e3f1;
+        --border: #35484e;
+        --input: #35484e;
+        --ring: #71b0cf;
+        --radius: 1rem;
+        --gradient-start: #71b0cf;
+        --gradient-end: #4a8a9f;
+      }
+      
+      body {
+        background-color: var(--background);
+        color: var(--foreground);
+        font-family: 'Lora', serif;
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Libre Baskerville', serif;
+      }
+
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+
+      /* Custom scrollbar for webkit */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: var(--background); 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: var(--border); 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: var(--primary); 
+      }
+
+      .masonry-grid {
+        column-count: 1;
+        column-gap: 1.5rem;
+      }
+      @media (min-width: 768px) {
+        .masonry-grid {
+          column-count: 2;
+        }
+      }
+      @media (min-width: 1280px) {
+        .masonry-grid {
+          column-count: 3;
+        }
+      }
+      .masonry-item {
+        break-inside: avoid;
+        margin-bottom: 1.5rem;
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              background: 'var(--background)',
+              foreground: 'var(--foreground)',
+              card: 'var(--card)',
+              'card-foreground': 'var(--card-foreground)',
+              popover: 'var(--popover)',
+              'popover-foreground': 'var(--popover-foreground)',
+              primary: 'var(--primary)',
+              'primary-foreground': 'var(--primary-foreground)',
+              secondary: 'var(--secondary)',
+              'secondary-foreground': 'var(--secondary-foreground)',
+              muted: 'var(--muted)',
+              'muted-foreground': 'var(--muted-foreground)',
+              accent: 'var(--accent)',
+              'accent-foreground': 'var(--accent-foreground)',
+              destructive: 'var(--destructive)',
+              'destructive-foreground': 'var(--destructive-foreground)',
+              border: 'var(--border)',
+              input: 'var(--input)',
+              ring: 'var(--ring)',
+            },
+            fontFamily: {
+              heading: ['"Libre Baskerville"', 'serif'],
+              body: ['Lora', 'serif'],
+              sans: ['"Libre Baskerville"', 'serif'], // Mapping sans to heading for compatibility with some classes
+              serif: ['Lora', 'serif'],
+            },
+            borderRadius: {
+              "DEFAULT": "8px",
+              "lg": "16px",
+              "xl": "24px",
+              "full": "9999px"
+            },
+            animation: {
+              gradientRing: 'gradientRing 3s ease infinite',
+            },
+            keyframes: {
+              gradientRing: {
+                '0%': { backgroundPosition: '0% 50%' },
+                '50%': { backgroundPosition: '100% 50%' },
+                '100%': { backgroundPosition: '0% 50%' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.9.6",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
